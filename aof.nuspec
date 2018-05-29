@@ -1,17 +1,39 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>aof</id>
-    <version>1.0.0</version>
+
+    <!-- The identifier that must be unique within the hosting gallery -->
+    <id>company.practice.aof</id>
+
+    <!-- The package version number that is used when resolving dependencies -->
+    <version>1.0.0-alpha</version>
+
+    <!-- Authors contain text that appears directly on the gallery -->
     <authors>wayne drury</authors>
-    <owners>wayne drury</owners>
+    
+    <!-- 
+        Owners are typically nuget.org identities that allow gallery
+        users to easily find other packages by the same owners.  
+    -->    
+    <owners>wayne@tfs2017</owners>
+
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <projectUrl>http://dvxxxxw01:8000/</projectUrl>
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    
+    <!-- 
+        The description can be used in package manager UI. Note that the
+        nuget.org gallery uses information you add in the portal. 
+    -->
     <description>Automated Orchestration Framework</description>
+
+    <!-- Any details about this particular release -->    
     <releaseNotes>Initial release of the package.</releaseNotes>
-    <copyright>Copyright 2018</copyright>
+
+    <copyright>Copyright ©2018 Company</copyright>
+
     <tags>powershell module automated orchestration framework aof</tags>
+
   </metadata>
 </package>
