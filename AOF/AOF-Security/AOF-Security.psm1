@@ -1,25 +1,29 @@
 <#
     .Synopsis
-    Displays version informtion of the module
+    Create an AES key file
 
     .Description
-    Displays full version and contain information for the module
+    Create an AES key file of specified byte size 16, 32, 64.
 
     .Example
-    Get-AOFVersion
+    Add-AESKey -Path C:\AESfile.key -Size 16
 
 #>
 
-function Get-AOFVersion {
+function Add-AESKey {
     [CmdletBinding()]
-    param (
-        
+
+    param(
+        [string] $Path,
+        [int] $KeySize
     )
-    
+
+
     begin {
-        $ver = 1.0.0
-        $authorFullname = 'Wayne Drury'
-    }
+        $KeyFile = $Path
+        $Key = New-Object Byte[] $KeySize   # You can use 16, 24, or 32 for AES
+        [Security.Cryptography.RNGCryptoServiceProvider]::Create().GetBytes($Key)
+        $Key | out-file $KeyFile    }
     
     process {
         $version = @{
